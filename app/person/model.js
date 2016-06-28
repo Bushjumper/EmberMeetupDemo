@@ -18,8 +18,8 @@ var Person = Model.extend({
 Person.reopenClass({
   FIXTURES: [{
     id: 1,
-    firstName: 'Trek',
-    lastName: 'Glowacki'
+    firstName: 'Yehuda',
+    lastName: 'Katz'
   }, {
     id: 2,
     firstName: 'Tom',
