@@ -6,14 +6,14 @@ import {
 } from 'ember-cli-page-object';
 
 export default create({
-  visit: visitable('/people'),
+  visit: visitable('/goals'),
   header: text('h2'),
 
-  people: collection({
+  goals: collection({
     itemScope: 'ul li',
 
     item: {
-      name: text(),
+      title: text(),
     }
   })
 
