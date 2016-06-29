@@ -1,0 +1,35 @@
+.goals {
+  .goal{
+    &:first-child {
+      border-top: 1px solid $grey-lighter;
+    }
+    border-bottom: 1px solid $grey-light;
+    white-space: nowrap;
+    .title, .value, .button{
+      display: inline-block;
+      vertical-align: top;
+      white-space: nowrap;
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-right: -5px;
+    }
+    .title{
+      width: 60%;
+      text-align: left;
+      line-height: 30px;
+      @include fade($white);
+    }
+    .value {
+      width: 20%;
+      input{
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 2px 8px;
+      }
+    }
+    .button{
+      width: 20%;
+    }
+  }
+}

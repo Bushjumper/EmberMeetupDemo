@@ -1,0 +1,16 @@
+@mixin fade($color: $white, $width: 30px, $height: 100%, $right: 0, $top: 0, $left: auto, $bottom: auto, $deg: 90deg, $opa1: 0, $opa2: 1){
+  position: relative;
+  overflow: hidden;
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: $right;
+    left: $left;
+    top: $top;
+    bottom: $bottom;
+    width: $width;
+    height: $height;
+    @include background-image(linear-gradient($deg, rgba($color, $opa1), rgba($color, $opa2)));
+  }
+}

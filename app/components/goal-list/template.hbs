@@ -1,9 +1,13 @@
 <ul class="goals">
   {{#each goals as |goal|}}
-    <li>
+    <li class="goal">
       <span class="title">{{goal.title}}</span>
-      {{input type="number" value=goal.value}}
-      <button {{action (action "saveGoal" goal)}}>save</button>
+      <div class="value">
+        {{input type="number" value=goal.value}}
+      </div>
+      <div class="button">
+        <button {{action (action "saveGoal" goal)}}>{{partial 'svg/icon-done'}}</button>
+      </div>
     </li>
   {{/each}}
 </ul>
