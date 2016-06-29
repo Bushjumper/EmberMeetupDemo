@@ -3,7 +3,14 @@
     <li class="item">
       <span class="cell-1">{{goal.title}}</span>
       <div class="cell-2">
-        {{input type="number" value=goal.value}}
+        {{ui-slider
+          value=goal.value
+          min=0
+          max=100
+          tooltip='hide'
+          immediateResponse=true
+          mood='info'
+        }}
       </div>
       <div class="cell-3">
         <button {{action (action "saveGoal" goal)}}>{{partial 'svg/icon-done'}}</button>
