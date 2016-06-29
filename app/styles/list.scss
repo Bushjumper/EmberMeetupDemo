@@ -1,7 +1,56 @@
 .list {
   .item{
-    border-bottom: 1px solid $grey-light;
+    border: 1px solid $grey-light;
+    border-bottom: none;
     white-space: nowrap;
+    position: relative;
+    .icon{
+      position: absolute;
+      left: 5px;
+      width: 30px;
+      height: 100%;
+      text-align: center;
+      .dot{
+        width: 15px;
+        height: 15px;
+        background: $grey;
+        border-radius: 100%;
+        display: inline-block;
+        margin-top: 18px;
+        &.green{
+          background: $green;
+        }
+        &.amber{
+          background: $amber;
+        }
+        &.red{
+          background: $red;
+        }
+      }
+      .avatar{
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        display: inline-block;
+        border: 3px solid $grey;
+        margin-top: 12px;
+        svg{
+          vertical-align: top;
+          fill: $grey;
+          max-width: 100%;
+          max-height: 100%;
+        }
+        &.green{
+          border-color: $green;
+        }
+        &.amber{
+          border-color: $amber;
+        }
+        &.red{
+          border-color: $red;
+        }
+      }
+    }
     .cell-1, .cell-2, .cell-3{
       display: inline-block;
       vertical-align: top;
@@ -12,6 +61,7 @@
       margin-right: -5px;
     }
     .cell-1{
+      padding-left: 40px;
       width: 50%;
       text-align: left;
       line-height: 30px;
@@ -27,16 +77,15 @@
     }
     .cell-3{
       width: 20%;
+      line-height: 30px;
     }
     &.total{
-      border-top: 1px solid $grey-light;
-      margin-top: 2px;
+      border: 1px solid $grey-lighter;
+      text-transform: uppercase;
+      font-size: 12px;
     }
-    &:first-child {
-      border-top: 1px solid $grey-very-light;
-    }
-    &:last-child {
-      border-bottom-color: $grey-very-light;
+    &:last-child:not(.total){
+      border-bottom: 1px solid $grey-light;
     }
   }
 }

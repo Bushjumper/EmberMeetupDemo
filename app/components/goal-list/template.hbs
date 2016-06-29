@@ -1,6 +1,11 @@
 <ul class="list">
   {{#each goals as |goal|}}
     <li class="item">
+      <div class="icon">
+        <i class="avatar green">
+          {{partial 'svg/icon-piechart'}}
+        </i>
+      </div>
       <span class="cell-1">{{goal.title}}</span>
       <div class="cell-2">
         {{input type="number" value=goal.value}}
@@ -11,6 +16,6 @@
     </li>
   {{/each}}
   <li class="item total">
-    <div class="cell-1">Total goals: {{goals.length}}</div>
+    <div class="cell-1">Total goals: <b>{{goals.length}}</b></div>
   </li>
 </ul>
