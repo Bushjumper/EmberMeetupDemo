@@ -1,11 +1,8 @@
-.goals {
-  .goal{
-    &:first-child {
-      border-top: 1px solid $grey-lighter;
-    }
+.list {
+  .item{
     border-bottom: 1px solid $grey-light;
     white-space: nowrap;
-    .title, .value, .button{
+    .cell-1, .cell-2, .cell-3{
       display: inline-block;
       vertical-align: top;
       white-space: nowrap;
@@ -14,22 +11,32 @@
       box-sizing: border-box;
       margin-right: -5px;
     }
-    .title{
-      width: 60%;
+    .cell-1{
+      width: 50%;
       text-align: left;
       line-height: 30px;
       @include fade($white);
     }
-    .value {
-      width: 20%;
+    .cell-2{
+      width: 30%;
       input{
         max-width: 100%;
         box-sizing: border-box;
         padding: 2px 8px;
       }
     }
-    .button{
+    .cell-3{
       width: 20%;
+    }
+    &.total{
+      border-top: 1px solid $grey-light;
+      margin-top: 2px;
+    }
+    &:first-child {
+      border-top: 1px solid $grey-very-light;
+    }
+    &:last-child {
+      border-bottom-color: $grey-very-light;
     }
   }
 }
