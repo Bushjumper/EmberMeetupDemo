@@ -18,7 +18,8 @@ var Goal = Model.extend({
 Goal.reopenClass({
   FIXTURES: [{
     id: 1,
-    title: 'Create demo app'
+    title: 'Create demo app',
+    person: 1
   }, {
     id: 2,
     title: 'Goal model and data'

@@ -18,3 +18,16 @@ test('visiting /people', function(assert) {
     assert.equal(page.people(1).name, 'Tom Dale', 'The second person is listed as Tom Dale');
   });
 });
+
+test('viewing a person\'s goals', function(assert) {
+  page.visit();
+
+  andThen(function() {
+    assert.equal(page.goals().count, 0, 'There are 0 goals listed');
+
+    page.people(0).click();
+    andThen(function() {
+      assert.equal(page.goals().count, 1, 'There is 1 goal listed');
+    });
+  });
+});
