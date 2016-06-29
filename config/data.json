@@ -1,0 +1,76 @@
+{
+  "people": {
+    "1": {
+      "firstName": "Graeme",
+      "lastName": "Longman"
+    },
+    "2": {
+      "firstName": "Michiel",
+      "lastName": "van Wijk"
+    },
+    "3": {
+      "firstName": "Monde",
+      "lastName": "Sineke"
+    },
+    "4": {
+      "firstName": "Matt",
+      "lastName": "O'Neill"
+    },
+    "5": {
+      "firstName": "Warren",
+      "lastName": "Hall"
+    }
+  },
+  "goals": {
+    "1": {
+      "title": "Create EmberJS meetup group",
+      "person": "4",
+      "value": 100
+    },
+    "2": {
+      "title": "Build demo app",
+      "person": "1",
+      "value": 10
+    },
+    "3": {
+      "title": "Write demo talk",
+      "person": "1",
+      "value": 10
+    },
+    "4": {
+      "title": "Add styling for demo app",
+      "person": "2",
+      "value": 80
+    },
+    "5": {
+      "title": "Schedule first meetup",
+      "person": "1",
+      "value": 100
+    },
+    "6": {
+      "title": "Update location details",
+      "person": "1",
+      "value": 100
+    },
+    "7": {
+      "title": "Organise snacks and drinks",
+      "person": "4",
+      "value": 80
+    },
+    "8": {
+      "title": "Host meetup",
+      "person": "2",
+      "value": 30
+    },
+    "9": {
+      "title": "Organise meetup",
+      "person": "2",
+      "value": 30
+    },
+    "10": {
+      "title": "Moral support",
+      "person": "3",
+      "value": 50
+    }
+  }
+}

@@ -22,7 +22,7 @@ var Person = Model.extend({
       total += parseInt(goal.get('value'));
     });
     if (total > 0) {
-      return Math.round(total / count, 0)
+      return Math.round(total / count, 0);
     } else {
       return 0;
     }
