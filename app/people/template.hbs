@@ -2,7 +2,10 @@
 
 <ul class="people">
   {{#each people as |person|}}
-    <li {{action (action "gotoPersonGoals" person)}}>{{person.firstName}} {{person.lastName}}</li>
+    <li {{action (action "gotoPersonGoals" person)}}>
+      <span class="name">{{person.firstName}} {{person.lastName}}</span>
+      <span class="score">{{person.score}}</span>
+    </li>
   {{/each}}
 </ul>
 

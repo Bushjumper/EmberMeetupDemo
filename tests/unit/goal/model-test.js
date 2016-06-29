@@ -8,6 +8,8 @@ moduleForModel('goal', 'Unit | Model | goal', {
   needs: []
 });
 
+/* attributes */
+
 test('should have a title attribute', function(assert) {
   const Goal = this.store().modelFor('goal');
   const attribute = Ember.get(Goal, 'attributes').get('title');
@@ -21,6 +23,15 @@ test('should have a colour attribute', function(assert) {
 
   assert.equal(attribute.type, 'string');
 });
+
+test('should have a value attribute', function(assert) {
+  const Goal = this.store().modelFor('goal');
+  const attribute = Ember.get(Goal, 'attributes').get('value');
+
+  assert.equal(attribute.type, 'number');
+});
+
+/* relationships */
 
 test('should belong to an owner', function(assert) {
   const Goal = this.store().modelFor('goal');

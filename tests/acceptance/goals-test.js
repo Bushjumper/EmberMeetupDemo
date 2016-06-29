@@ -9,7 +9,7 @@ moduleForAcceptance('Acceptance | goals');
 test('visiting /goals', function(assert) {
   page.visit();
 
-  andThen(function() {
+  andThen(() => {
     assert.equal(currentURL(), '/goals', 'The user is on the /goals route after visiting the /goals URL');
     assert.equal(page.header, 'Goals', 'The page header is "Goals"');
 

@@ -1,9 +1,3 @@
 <h3>{{person.firstName}}'s Goals</h3>
 
-<ul class="goals">
-  {{#each person.goals as |goal|}}
-    <li>{{goal.title}}</li>
-  {{/each}}
-</ul>
-
-Total goals: {{person.goals.length}}
+{{goal-list goals=person.goals}}

@@ -13,7 +13,7 @@ export default create({
     itemScope: 'ul li',
 
     item: {
-      title: text(),
+      title: text('.title'),
     }
   })
 

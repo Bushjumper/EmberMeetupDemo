@@ -9,7 +9,7 @@ moduleForAcceptance('Acceptance | people');
 test('visiting /people', function(assert) {
   page.visit();
 
-  andThen(function() {
+  andThen(() => {
     assert.equal(currentURL(), '/people', 'The user is on the /people route after visiting the /people URL');
     assert.equal(page.header, 'People', 'The page header is "People"');
 
@@ -22,12 +22,12 @@ test('visiting /people', function(assert) {
 test('viewing a person\'s goals', function(assert) {
   page.visit();
 
-  andThen(function() {
+  andThen(() => {
     assert.equal(page.goals().count, 0, 'There are 0 goals listed');
 
     page.people(0).click();
-    andThen(function() {
-      assert.equal(page.goals().count, 1, 'There is 1 goal listed');
+    andThen(() => {
+      assert.equal(page.goals().count, 5, 'There are 5 goals listed');
     });
   });
 });

@@ -14,7 +14,8 @@ export default create({
     itemScope: 'ul.people li',
 
     item: {
-      name: text(),
+      name: text('.name'),
+      score: text('.score'),
       click: clickable()
     }
   }),
