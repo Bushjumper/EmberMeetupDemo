@@ -1,0 +1,42 @@
+.list {
+  .item{
+    border-bottom: 1px solid $grey-light;
+    white-space: nowrap;
+    .cell-1, .cell-2, .cell-3{
+      display: inline-block;
+      vertical-align: top;
+      white-space: nowrap;
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-right: -5px;
+    }
+    .cell-1{
+      width: 50%;
+      text-align: left;
+      line-height: 30px;
+      @include fade($white);
+    }
+    .cell-2{
+      width: 30%;
+      input{
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 2px 8px;
+      }
+    }
+    .cell-3{
+      width: 20%;
+    }
+    &.total{
+      border-top: 1px solid $grey-light;
+      margin-top: 2px;
+    }
+    &:first-child {
+      border-top: 1px solid $grey-very-light;
+    }
+    &:last-child {
+      border-bottom-color: $grey-very-light;
+    }
+  }
+}

@@ -1,14 +1,16 @@
-<h2>People</h2>
+<h2 class="title">People</h2>
 
-<ul class="people">
+<ul class="list">
   {{#each people as |person|}}
-    <li {{action (action "gotoPersonGoals" person)}}>
-      <span class="name">{{person.firstName}} {{person.lastName}}</span>
-      <span class="score">{{person.score}}</span>
+    <li class="item" {{action (action "gotoPersonGoals" person)}}>
+      <div class="cell-1 name">{{person.firstName}} {{person.lastName}}</div>
+      <div class="cell-2"></div>
+      <div class="cell-3 score">{{person.score}}</div>
     </li>
   {{/each}}
+   <li class="item total">
+    <div class="cell-1">Total people: {{people.length}}</div>
+  </li>
 </ul>
-
-Total people: {{people.length}}
 
 {{outlet}}
