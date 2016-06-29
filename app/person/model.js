@@ -18,10 +18,15 @@ var Person = Model.extend({
   score: Ember.computed('goals.@each.value', function() {
     let count = this.get('goals.length');
     let total = 0;
-    this.get('goals').forEach(goal => {
-      total += goal.get('value');
+    (this.get('goals') || []).forEach(goal => {
+      total += parseInt(goal.get('value'));
     });
-    return total / count;
+    if (total > 0) {
+      return Math.round(total / count, 0);
+    } else {
+      return 0;
+    }
+
   })
 
 });
