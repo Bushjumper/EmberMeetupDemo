@@ -13,7 +13,7 @@ export default create({
     itemScope: 'li.qa-goal',
 
     item: {
-      title: text('.qa-title'),
+      title: text('.qa-title')
     }
   })
 

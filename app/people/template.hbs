@@ -2,7 +2,7 @@
   {{#each people as |person|}}
     <li class="item qa-person" {{action (action "gotoPersonGoals" person)}}>
       <div class="icon">
-        <i class="avatar green">{{partial 'svg/icon-face'}}</i>
+        <i class="avatar colour-here">{{partial 'svg/icon-face'}}</i>
       </div>
       <div class="cell-1 name">{{person.firstName}} {{person.lastName}}</div>
       <div class="cell-2"></div>

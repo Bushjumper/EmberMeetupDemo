@@ -12,6 +12,7 @@ test('visiting /goals', function(assert) {
 
   andThen(() => {
     assert.equal(currentURL(), '/goals', 'The user is on the /goals route after visiting the /goals URL');
+
     assert.ok(nav.goals.isActive, 'The "Goals" nav item is active');
 
     assert.equal(page.goals().count, 12, 'There are 12 goals in the list');

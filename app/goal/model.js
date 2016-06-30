@@ -1,14 +1,15 @@
+import Ember from 'ember';
 import Model from 'ember-data/model';
 import attr from 'ember-data/attr';
 import {
   belongsTo
 } from 'ember-data/relationships';
 
+
 var Goal = Model.extend({
 
   // attributes
   title: attr('string'),
-  colour: attr('string'),
   value: attr('number', {
     defaultValue: 0
   }),
@@ -16,7 +17,13 @@ var Goal = Model.extend({
   // relationships
   person: belongsTo(),
 
+  // properties
+
+  colour: Ember.computed('value', function() {
+  })
+
 });
+
 
 Goal.reopenClass({
   FIXTURES: [{

@@ -65,3 +65,4 @@ test('should have a score, which is the average of goal values', function(assert
 
   assert.equal(person.get('score'), 56, 'is 56 when there is another goal with a string value of 100');
 });
+

@@ -11,6 +11,7 @@ var Person = Model.extend({
   firstName: attr('string'),
   lastName: attr('string'),
 
+
   // relationships
   goals: hasMany(),
 
@@ -26,10 +27,11 @@ var Person = Model.extend({
     } else {
       return 0;
     }
+  }),
 
-  })
 
 });
+
 
 Person.reopenClass({
   FIXTURES: [{
