@@ -2,6 +2,7 @@ import {
   test
 } from 'qunit';
 import moduleForAcceptance from 'ember-meetup-demo/tests/helpers/module-for-acceptance';
+import nav from '../pages/nav';
 import page from '../pages/goals';
 
 moduleForAcceptance('Acceptance | goals');
@@ -11,7 +12,7 @@ test('visiting /goals', function(assert) {
 
   andThen(() => {
     assert.equal(currentURL(), '/goals', 'The user is on the /goals route after visiting the /goals URL');
-    assert.equal(page.header, 'Goals', 'The page header is "Goals"');
+    assert.ok(nav.goals.isActive, 'The "Goals" nav item is active');
 
     assert.equal(page.goals().count, 12, 'There are 12 goals in the list');
     assert.equal(page.goals(0).title, 'Create demo app', 'The first goal title is correct');
