@@ -10,10 +10,10 @@ export default create({
   header: text('h2'),
 
   goals: collection({
-    itemScope: 'ul li',
+    itemScope: 'li.qa-goal',
 
     item: {
-      title: text('.title'),
+      title: text('.qa-title'),
     }
   })
 

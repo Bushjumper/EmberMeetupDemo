@@ -11,7 +11,7 @@ export default create({
   header: text('h2'),
 
   people: collection({
-    itemScope: 'ul.people li',
+    itemScope: 'li.qa-person',
 
     item: {
       name: text('.name'),
@@ -21,7 +21,7 @@ export default create({
   }),
 
   goals: collection({
-    itemScope: 'ul.goals li',
+    itemScope: 'li.qa-goal',
 
     item: {
       title: text(),
